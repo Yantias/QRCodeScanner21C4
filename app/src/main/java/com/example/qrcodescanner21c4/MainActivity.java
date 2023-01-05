@@ -1,5 +1,6 @@
 package com.example.qrcodescanner21c4;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //View object
 
-        buttonScanning = (Button) findViewById(R.id.buttonscan);
+        buttonScanning = (Button) findViewById(R.id.buttonScan);
         textViewName = (TextView) findViewById(R.id.textViewNama);
         textViewClass = (TextView) findViewById(R.id.textViewKelas);
         textViewId = (TextView) findViewById(R.id.TextViewNim);
@@ -86,22 +87,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, result.getContents(),
                             Toast.LENGTH_LONG).show();
                 }
-            }  }{
+            }    }{
             try {
                 String geoUri=result.getContents();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
-                //Set Package
-                intent.setPackage("com.google.android.apps.maps");
+                Intent Intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(geoUri));
+                // Set Package
+                Intent.setPackage("com.google.android.apps.maps");
 
-                //Set Flag
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                // Set Flag
+                Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                startActivity(intent);
+                startActivity(Intent);
             }finally {
 
             }
 
-        } {
+        }   {
             super.onActivityResult(requestCode, resultCode, data);
         }
 
