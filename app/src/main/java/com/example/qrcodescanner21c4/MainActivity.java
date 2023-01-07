@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //View object
 
-        buttonScanning = (Button) findViewById(R.id.buttonscan);
+        buttonScanning = (Button) findViewById(R.id.buttonqrscan);
         textViewName = (TextView) findViewById(R.id.textViewNama);
         textViewClass = (TextView) findViewById(R.id.textViewKelas);
         textViewId = (TextView) findViewById(R.id.TextViewNim);
