@@ -29,13 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<<<< Temporary merge branch 1
-
-        //View object
-
-=========
         //View Object
->>>>>>>>> Temporary merge branch 2
         buttonScanning = (Button) findViewById(R.id.buttonqrscan);
         textViewName = (TextView) findViewById(R.id.textViewNama);
         textViewClass = (TextView) findViewById(R.id.textViewKelas);
